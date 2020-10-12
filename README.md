@@ -64,3 +64,40 @@ def tokenz():
 		print "\033[1;91m[!] Wrong"
 		e = raw_input("\033[1;91m[?] \033[1;92mWant to pick up token?\033[1;97m[y/n]: ")
 		
+b.write(a['access_token'])
+		b.close()
+		print '[*] successfully generate access token'
+		print '[*] Your access token is stored in cookie/token.log'
+		menu()
+	except KeyError:
+		print '[!] Failed to generate access token'
+		print '[!] Check your connection / email or password'
+		os.remove('cookie/token.log')
+		menu()
+	except requests.exceptions.ConnectionError:
+		print '[!] Failed to generate access token'
+		print '[!] Connection error !!!'
+		os.remove('cookie/token.log')
+		menu()
+
+def phone():
+	global toket
+	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		print"\x1b[1;94mToken invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	os.system('clear')		
+
+#Dev:BADAMALA 302-BOYS
+##### LOGO #####
+logo = """
+\033[1;91mв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–€в–€в–€в–€в–€
+\033[1;92mв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–€в–€в–€в–€в–€в–€в–€в–€в”Ђв”Ђв”Ђв–€в–€в–€в–€в–€
+\033[1;93mв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€
+\033[1;94mв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€
+\033[1;95mв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€
+\033[1;96mв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв
