@@ -227,3 +227,26 @@ def login():
         print "\033[1;96m[0]\033[1;47m\033[1;31mExit                             \033[1;0m"
 	time.sleep(0.05)
 	pilih_login()
+def pilih_login():
+	peak = raw_input("\n\033[1;97m[+] \033[0;31mSelect Option: \033[1;91m")
+	if peak =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih_login()
+	elif peak =="1":
+		login1()
+        elif peak =="2":
+	        tokenz()
+        elif peak =="3":
+	        os.system('xdg-open https://m.apkpure.com/get-access-token/com.proit.thaison.getaccesstokenfacebook/download/1-APK?from=versions%2Fversion')
+	        login()
+        elif peak =="4":
+	        os.system('xdg-open https://www.youtube.com/c/UCQdBT_TMMD3l6CrS6JxiUSQ')
+	        login()
+        elif peak =="5":
+	        os.system('xdg-open https://chat.whatsapp.com/ ')
+                login()
+	elif peak =="0":
+		keluar()
+        else:
+		print"\033[1;91m[!] Wrong input"
+		keluar()
