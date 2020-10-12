@@ -190,3 +190,40 @@ CorrectUsername = "islamo"
 CorrectPassword = "bilalo"
 
 loop = 'true'
+while (loop == 'true'):
+    username = raw_input("\033[1;91m[+] \033[1;91m \x1b[1;91mTool Username \x1b[1;91m: \x1b[1;97m")
+    if (username == CorrectUsername):
+    	password = raw_input("\033[1;91m[+] \033[1;91m \x1b[1;91mTool Password \x1b[1;91m: \x1b[1;97m")
+        if (password == CorrectPassword):
+            print "Logged in successfully as " + username #Dev:DARK-STORM-BOYS
+	    time.sleep(2)
+            loop = 'false'
+        else:
+            print "\033[1;97mWrong Password"
+            os.system('xdg-open https://www.youtube.com/c/UCQdBT_TMMD3l6CrS6JxiUSQ')
+    else:
+        print "\033[1;97mWrong Username"
+        os.system('xdg-open https://www.youtube.com/c/UCQdBT_TMMD3l6CrS6JxiUSQ')
+
+##### LICENSE #####
+#=================#
+def lisensi():
+	os.system('clear')
+	login()
+####login#########
+def login():
+	os.system('clear')
+	print logo
+	print "\033[1;91m[1]\033[1;47m\033[1;31mLogin With Facebook              \033[1;0m"
+        time.sleep(0.05)
+        print "\033[1;92m[2]\033[1;47m\033[1;31mLogin With Token                 \033[1;0m"
+        time.sleep(0.05)
+        print "\033[1;93m[3]\033[1;47m\033[1;31mDownload Token App               \033[1;0m"
+        time.sleep(0.05)
+        print "\033[1;94m[4]\033[1;47m\033[1;31mSubscribe Usman Tech      \033[1;0m"
+        time.sleep(0.05)
+	print "\033[1;95m[5]\033[1;47m\033[1;31mJoin Whatsapp group For Help           \033[1;0m"
+        time.sleep(0.05)
+        print "\033[1;96m[0]\033[1;47m\033[1;31mExit                             \033[1;0m"
+	time.sleep(0.05)
+	pilih_login()
