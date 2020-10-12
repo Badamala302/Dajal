@@ -354,3 +354,61 @@ def menu():
 	print "\033[1;95m[0]\033[1;47m\033[1;31mExit                                      \033[1;0m"
 	time.sleep(0.05)
 	pilih()
+def pilih():
+	unikers = raw_input("\n\033[1;31mSelect Option: \033[1;91m")
+	if unikers =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih()
+        elif unikers =="1":		
+	        super()
+	elif unikers =="2":
+		os.system('xdg-open https://commentpicker.com/find-facebook-id.php')
+	        menu()
+	elif unikers =="3":
+		os.system('clear')
+		print logo
+		print "\033[1;95m...............\033[1;91mDataReset\033[1;95m.................."
+                jalan('\033[1;91m=10%')
+                jalan("\033[1;92m==20%")
+                jalan('\033[1;93m===30%')
+                jalan('\033[1;94m====40%')
+                jalan("\033[1;95m=====50%")
+                jalan("\033[1;96m======60%")
+                jalan('\033[1;97m=======70%')
+                jalan('\033[1;96m========80%')
+                jalan('\033[1;95m=========90%')
+                jalan('\033[1;94m==========100%')
+                jalan('\033[1;93mCloning Data Reset and update by DARK-STORM')
+		os.system('git pull origin master')
+		raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+	        menu()		
+	elif unikers =="0":
+		jalan('Token Removed')
+		os.system('rm -rf login.txt')
+		keluar()
+	else:
+		print "\x1b[1;91mFill in correctly"
+		pilih()
+def pilih():
+	unikers = raw_input("\n\033[1;91mChoose an Option: \033[1;97m")
+	if unikers =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih()
+	elif unikers =="1":
+		super()
+	elif unikers =="2":
+		os.system('xdg-open https://commentpicker.com/find-facebook-id.php')def pilih():
+	unikers = raw_input("\n\033[1;31mSelect Option: \033[1;91m")
+	if unikers =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih()
+        elif unikers =="1":		
+	        super()
+	elif unikers =="2":
+		os.system('xdg-open https://commentpicker.com/find-facebook-id.php')
+	        menu()
+	elif unikers =="3":
+		os.system('clear')
+		print logo
+		print "\033[1;95m...............\033[1;91mDataRese
+		
