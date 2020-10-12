@@ -434,4 +434,39 @@ def pilih():
 	else:
 		print "\x1b[1;91mFill in correctly"
 		pilih()
+def super():
+	global toket
+	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		print"\x1b[1;91mToken invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	os.system('clear')
+	print logo
+	print "\033[1;97m[1]\033[1;47m\033[1;91mClone From Friend List    \033[1;0m"
+	time.sleep(0.05)
+	print "\033[1;97m[2]\033[1;47m\033[1;91mClone From Public Id \033[1;0m"
+	time.sleep(0.05)
+	print "\033[1;97m[0]\033[1;47m\033[1;91mBack                     \033[1;0m"
+	time.sleep(0.05)
+	pilih_super()
 
+def pilih_super():
+	peak = raw_input("\n\033[1;97m[+]\033[1;91mSelect Option: \033[1;97m")
+	if peak =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih_super()
+	elif peak =="1":
+		os.system('clear')
+		print "\033[1;97mвЂў-----------------\033[1;37mMR-SH4DOW\033[1;97m-----------------вЂў"
+		print logo
+		jalan('\033[1;97m[+]\033[1;91mMR-SH4DOWв–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–€в–’в–’в–’в–’в–’в–’в–’в–’..99%\033[1;97m:-:')
+		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for s in z['data']:
+			id.append(s['id'])
+	elif peak =="2":
+		os.system('clear')
